@@ -6,7 +6,7 @@ const Routes = () => (
 	<Router>
 		<div>
 			<Route exact path='/' component={LaunchesView} />
-			<Route path='/Launches' component={LaunchesView} />
+			{/* <Route path='/Launches' component={LaunchesView} /> */}
 		</div>
 	</Router>
 );

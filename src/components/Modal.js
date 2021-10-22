@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import rocketService from '../services/RocketService';
 
-const Modal = ({ launchId, showDetails }) => {
+const Modal = ({ toggleShowDetails, newInfo, launchId }) => {
 	const [rocketDetails, setRocketDetails] = useState({});
 
 	useEffect(() => {
@@ -9,7 +9,7 @@ const Modal = ({ launchId, showDetails }) => {
 			.get(launchId)
 			.then((res) => setRocketDetails(res.data))
 			.catch((err) => console.log(err));
-	}, []);
+	}, [newInfo]);
 
 	return (
 		<div>
@@ -24,7 +24,13 @@ const Modal = ({ launchId, showDetails }) => {
 					<div>
 						<h2>Rocket Description:</h2> {rocketDetails.description}
 					</div>
-					{/* <button onClick={() => toggleLaunchModal()}>Close</button> */}
+					<button
+						className='closeButton'
+						type='button'
+						onClick={() => toggleShowDetails()}
+					>
+						Close
+					</button>
 				</div>
 			) : (
 				'Loading'

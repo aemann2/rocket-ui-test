@@ -6,6 +6,7 @@ import Launch from '../components/Launch';
 
 const LaunchesView = ({ dispatch, launchCollection }) => {
 	const [showDetails, setShowDetails] = useState(false);
+	const [newInfo, setNewInfo] = useState(true);
 	const [launchId, setLaunchId] = useState();
 
 	const toggleShowDetails = () => {
@@ -14,6 +15,7 @@ const LaunchesView = ({ dispatch, launchCollection }) => {
 
 	const getLaunchId = (id) => {
 		setLaunchId(id);
+		setNewInfo((prevState) => !prevState);
 	};
 
 	useEffect(() => {
@@ -35,6 +37,7 @@ const LaunchesView = ({ dispatch, launchCollection }) => {
 			<Launch
 				key={launch.id}
 				launch={launch}
+				newInfo={newInfo}
 				showDetails={showDetails}
 				toggleShowDetails={toggleShowDetails}
 				getLaunchId={getLaunchId}
@@ -47,14 +50,17 @@ const LaunchesView = ({ dispatch, launchCollection }) => {
 	return (
 		<div>
 			<h2> SpaceX launches </h2>
-			{showAllLaunches()}
-			{showDetails && (
-				<Modal
-					toggleShowDetails={toggleShowDetails}
-					showDetails={showDetails}
-					launchId={launchId}
-				/>
-			)}
+			<div>{showAllLaunches()}</div>
+			<div>
+				{showDetails && (
+					<Modal
+						toggleShowDetails={toggleShowDetails}
+						showDetails={showDetails}
+						newInfo={newInfo}
+						launchId={launchId}
+					/>
+				)}
+			</div>
 		</div>
 	);
 };

@@ -1,11 +1,13 @@
 import React from 'react';
 
 const Launch = (props) => {
-	const { showDetails, launch, toggleShowDetails, getLaunchId } = props;
+	const { launch, showDetails, toggleShowDetails, getLaunchId } = props;
 
 	const handleClick = () => {
 		getLaunchId(launch.rocket.rocket_id);
-		toggleShowDetails();
+		if (!showDetails) {
+			toggleShowDetails();
+		}
 	};
 
 	return (

@@ -64,15 +64,25 @@ body
 
 .modal
   position: fixed
+  display: flex
+  flex-direction: column
   top: 100px
   right: 100px
   width: 200px
-  height: 200px
+  height: 520px
+  padding: 0 1rem
+  overflow: hidden
   background-color: #c7c7c7
+
+.closeButton
+  display: block
+  cursor: pointer
+  width: 50px
+  margin: auto auto 1rem auto
 
 .launchItem
   > h2
-    display: inline-flex;
-    cursor: pointer;
+    display: inline-flex
+    cursor: pointer
     &:hover
-      color: red;
+      color: red
