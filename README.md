@@ -16,53 +16,47 @@ Feel free to add new files, break up components and generally clean up code, but
 
 ### What we're using
 
-* React 16 (includes Hooks should you want to use them)
-* Webpack 4
-* React Router 4
-* SASS
-* Babel Cli
-* Hot Module Reloading
-* Jest 21 
-* Enzyme 3 for testing (should you have time to implement tests)
+- React 16 (includes Hooks should you want to use them)
+- Webpack 4
+- React Router 4
+- SASS
+- Babel Cli
+- Hot Module Reloading
+- Jest 21
+- Enzyme 3 for testing (should you have time to implement tests)
 
 ### Provided boilerplate
 
-* Simple `src/index.jsx` and `src/index.css` (local module css).
-* Webpack configuration for development (with hot reloading) and production (with minification).
-* Both js(x) and css hot loaded during development.
-* [Webpack Dashboard Plugin](https://github.com/FormidableLabs/webpack-dashboard) on dev server.
+- Simple `src/index.jsx` and `src/index.css` (local module css).
+- Webpack configuration for development (with hot reloading) and production (with minification).
+- Both js(x) and css hot loaded during development.
+- [Webpack Dashboard Plugin](https://github.com/FormidableLabs/webpack-dashboard) on dev server.
 
 ### How to run
 
-* You'll need to have [git](https://git-scm.com/) and [node](https://nodejs.org/en/) installed in your system.
-* Fork and clone the project:
+- You'll need to have [git](https://git-scm.com/) and [node](https://nodejs.org/en/) installed in your system.
+- Fork and clone the project:
 
 ```
 git clone https://github.com/DistruApp/rocket-ui-test
 ```
 
-* Then install the dependencies:
+- Then install the dependencies (note: use yarn for installation. node-sass causes problems with npm):
 
 ```
-npm install
+yarn install
 ```
 
-* Run development server:
+- Run development server:
 
 ```
-npm start
-```
-
-* Or you can run development server with [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard):
-
-```
-npm run dev
+yarn start
 ```
 
 Open the web browser to `http://localhost:7357/`
 
-
 ### How to test
+
 To run unit tests:
 
 ```
@@ -71,7 +65,7 @@ npm test
 
 Tests come bundled with:
 
-* Jest
-* Enzyme
-* React Test Utils
-* React Test Renderer
+- Jest
+- Enzyme
+- React Test Utils
+- React Test Renderer
