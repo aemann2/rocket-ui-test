@@ -5,8 +5,6 @@ import { Provider } from 'react-redux';
 import Routes from './routes';
 import store from './stores/Root';
 
-import '../styles/base/_main.sass'; // Global styles
-import '../styles/base/_common.sass'; // Global styles
 import '../styles/_style.sass'; // Css-module styles
 
 const renderApp = (Component) => {
