@@ -15,17 +15,20 @@ const Modal = ({ toggleShowDetails, newInfo, launchId }) => {
 		<div>
 			{rocketDetails ? (
 				<div className='modal'>
-					<div>
-						<h2>Rocket Name:</h2> {rocketDetails.rocket_name}
+					<div className='modal__par'>
+						<h2 className='modal__heading'>Rocket Name:</h2>
+						{rocketDetails.rocket_name}
 					</div>
-					<div>
-						<h2>Cost Per Launch:</h2> ${rocketDetails.cost_per_launch}
+					<div className='modal__par'>
+						<h2 className='modal__heading'>Cost Per Launch:</h2> $
+						{rocketDetails.cost_per_launch}
 					</div>
-					<div>
-						<h2>Rocket Description:</h2> {rocketDetails.description}
+					<div className='modal__par'>
+						<h2 className='modal__heading'>Rocket Description:</h2>
+						{rocketDetails.description}
 					</div>
 					<button
-						className='closeButton'
+						className='modal__button'
 						type='button'
 						onClick={() => toggleShowDetails()}
 					>

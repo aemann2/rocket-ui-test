@@ -11,9 +11,11 @@ const Launch = (props) => {
 	};
 
 	return (
-		<li className='launchItem'>
-			<h2 onClick={handleClick}> {launch.mission_name} </h2>
-			<div> Flight Number: {launch.flight_number} </div>
+		<li className='launch'>
+			<h2 className='launch__heading' onClick={handleClick}>
+				{launch.mission_name}
+			</h2>
+			<p className='launch__par'> Flight Number: {launch.flight_number} </p>
 		</li>
 	);
 };

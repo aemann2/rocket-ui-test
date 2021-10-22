@@ -48,9 +48,9 @@ const LaunchesView = ({ dispatch, launchCollection }) => {
 	};
 
 	return (
-		<div>
-			<h2> SpaceX launches </h2>
-			<div>{showAllLaunches()}</div>
+		<div className='launches'>
+			<h2 className='launches__heading'> SpaceX launches </h2>
+			<div className='launches__container'>{showAllLaunches()}</div>
 			<div>
 				{showDetails && (
 					<Modal

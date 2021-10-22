@@ -1,14 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Layout from './Layout';
-import Navigation from '../components/Navigation';
-
-const menu = Navigation();
 
 function MasterLayoutHOC(WrappedComponent, pageName) {
 	const MasterLayoutImpl = (props) => {
 		const layoutProps = {
-			menu,
 			pageName,
 		};
 

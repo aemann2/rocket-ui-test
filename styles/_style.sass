@@ -1,88 +1,107 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto')
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 
-body
+*
   margin: 0
+  padding: 0
 
 #app
-  font-family: 'Roboto', sans-serif
-  display: flex
-  flex-direction: row
-  position: absolute
-  width: 100%
-  height: 100vh
+  background-color: #020202
+  min-height: 100vh
 
-  > div
-    display: flex
-    flex-direction: column
-    width: 100%
+html
+  box-sizing: border-box
+  font-family: Arial, Verdana, sans-serif
 
-    main
-
-      display: flex
-      flex: 1
-      flex-direction: row
-      max-width: 1400px
-
-      > nav
-        width: 200px
-        border-right: 2px solid #999
-        background: #eee
-
-        > ul
-          list-style: none
-          padding: 8px
-          margin: 0
-
-          > li
-            margin: 4px;
-            padding: 4px
-            background: #ccc
-            border-bottom: 2px solid #ccc
-
-            &:hover
-              background: #ddd
-              border-bottom: 2px solid #999
-
-            > a
-              width: 100%
-              text-decoration: none
-              color: #333
-              padding: 4px
-              display: block
-
-
-
-      > section
-        flex: 1
-        overflow: auto
-        padding: 20px
-
-        > h1
-          margin-top: 0
-          border-bottom: 2px solid #999
-          color: #666
-
-.modal
-  position: fixed
+body 
+  background-color: #020202
+  font-size: 100%
   display: flex
   flex-direction: column
-  top: 100px
-  right: 100px
-  width: 200px
-  height: 520px
-  padding: 0 1rem
-  overflow: hidden
-  background-color: #c7c7c7
+  justify-content: flex-start
+  min-width: 440px;
+  @media (min-width: 900px)
+    flex-direction: row
+    justify-content: center
 
-.closeButton
+.launches
+  display: block
+  width: 400px
+  margin: 5rem auto 0 auto
+
+.launches__heading
+  color: white
+  font-size: 3rem
+  font-weight: 200
+  text-align: center
+  margin-bottom: 2rem
+  font-family: 'Ropa Sans', sans-serif
+
+.launches__container
+  color: white
+  height: 400px
+  overflow-y: scroll
+  overflow-x: hidden
+
+.launch
+  margin: 1rem 0
+  padding-bottom: 0.5rem
+  border-bottom: 1px solid silver
+
+.launch__heading
+  &:hover
+    color: gold
+
+.launch__heading
+  display: inline-block
+  margin-bottom: 0.5rem
+  cursor: pointer
+  transition: 0.3s
+
+.modal
+  position: static
+  width: 300px
+  margin: 1rem auto 0 auto
+  background-color: white
+  padding: 1rem
+  border-radius: 14px
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25)
+  z-index: 30
+  @media (min-width: 900px) 
+    position: absolute
+    top: 0
+    width: 300px
+    left: calc(80% - 20rem)
+
+.modal__heading
+  display: inline-block;
+  font-size: 1rem;
+
+.modal__par
+  margin-bottom: 1rem;
+
+.modal__button
   display: block
   cursor: pointer
   width: 50px
   margin: auto auto 1rem auto
 
-.launchItem
-  > h2
-    display: inline-flex
-    cursor: pointer
-    &:hover
-      color: red
+
+// Scrollbar
+
+/* Firefox */
+* 
+  scrollbar-width: auto
+  scrollbar-color: #020202 #000000
+
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar
+  width: 16px
+
+*::-webkit-scrollbar-track
+  background: #020202
+
+*::-webkit-scrollbar-thumb
+  background-color: #ffffff
+  border-radius: 10px
+  border: 3px none #ffffff
