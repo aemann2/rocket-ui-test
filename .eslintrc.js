@@ -2,6 +2,7 @@ module.exports = {
 	env: {
 		es6: true,
 		commonjs: true,
+		browser: true,
 	},
 	parser: 'babel-eslint',
 	parserOptions: {
